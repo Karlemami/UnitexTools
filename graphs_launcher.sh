@@ -44,12 +44,6 @@ mv "$path_to_input_file_directory$input_filename_no_extension.snt" "$preprocesse
 fst2_file_path=${path_to_graph_to_apply%.*}.fst2
 "$path_to_unitex_tool_logger/UnitexToolLogger" Locate "-t$preprocessed_file_path" "$path_to_unitex_french_directory/$fst2_file_path" "-a$path_to_unitex_french_directory/Alphabet.txt" -L -R --all -b -Y --stack_max=1000 --max_matches_per_subgraph=200 --max_matches_at_token_pos=400 --max_errors=50 -qutf8-no-bom
 
-# "$path_to_unitex_tool_logger/UnitexToolLogger" Concord "$snt_directory/concord.ind" "-m$path_to_output_directory$input_filename_no_extension.xml" -qutf8-no-bom
-
-# "$path_to_unitex_tool_logger/UnitexToolLogger" Normalize "$path_to_output_directory$input_filename_no_extension.xml" "-r$path_to_unitex_french_directory/Norm.txt" -qutf8-no-bom
-
-# "$path_to_unitex_tool_logger/UnitexToolLogger" Tokenize "$path_to_output_directory$input_filename_no_extension.xml" "-a$path_to_unitex_french_directory/Alphabet.txt" -qutf8-no-bom
-
 "$path_to_unitex_tool_logger/UnitexToolLogger" Concord "${snt_directory}/concord.ind" "-fCourier New" -s16 -l40 -r40 --CL --html
 mv ${snt_directory}/concord.html ${snt_directory}/${input_filename_no_extension}.html
 mv ${snt_directory}/concord.ind ${snt_directory}/${input_filename_no_extension}.ind
