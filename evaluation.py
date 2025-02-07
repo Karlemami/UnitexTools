@@ -30,7 +30,7 @@ def main(
     false_positives_folder: Path,
     false_negatives_folder: Path,
     matches_folder: Path,
-    paht_to_graph_to_apply: Path
+    path_to_graph_to_apply: Path
 ):
 
     make_directories_if_not_exist([output_file_directory])
